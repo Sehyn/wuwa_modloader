@@ -1,5 +1,8 @@
 # Wuwa Modloader Documentation
 
+![Modloader Screenshot](images/modloader_screenshot.png)
+
+
 ## Overview
 Wuwa Modloader is an application designed to simplify the management of mods for the game "Wuthering Waves." It provides features for browsing available mods, installing/uninstalling mods, and launching the game with mod support.
 
