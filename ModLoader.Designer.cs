@@ -1,6 +1,6 @@
 ﻿namespace wuwa_modloader
 {
-    partial class Form1
+    partial class ModLoader
     {
         private System.ComponentModel.IContainer components = null;
 

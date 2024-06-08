@@ -1,0 +1,10 @@
+{
+  "WuWa-Mod-AntiAntiCheat.pak": "Will disable logging events from anti-cheat",
+  "WuWa-Mod-AutoAbsorb.pak": "Will automatically absorb echoes",
+  "WuWa-Mod-AutoPickTreasure.pak": "Will automatically open chests and loot items\nChests have to be rendered by the game to loot it and do not support puzzle chests.",
+  "WuWa-Mod-CraftAnimationTime.pak": "Will skip craft animation time",
+  "WuWa-Mod-InfStamina.pak": "Will get you unlimited stamina",
+  "WuWa-Mod-KillAuraInfinite.pak": "Will kill automatically any monster nearby",
+  "WuWa-Mod-PerceptionRange(wip).pak": "Will be able to interact with objects/entities from a higher range than normal",
+  "WuWa-Mod-PlotCanSkip.pak": "Unstable skip cutscenes"
+}

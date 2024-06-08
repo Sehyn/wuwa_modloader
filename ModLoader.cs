@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 
 namespace wuwa_modloader
 {
-    public partial class Form1 : Form
+    public partial class ModLoader : Form
     {
         private string selectedFolderPath = string.Empty;
         private Dictionary<string, string> modDescriptions;
 
-        public Form1()
+        public ModLoader()
         {
             InitializeComponent();
             LoadModDescriptions();
