@@ -146,11 +146,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(216, 409);
+            label1.Location = new Point(173, 409);
             label1.Name = "label1";
-            label1.Size = new Size(83, 15);
+            label1.Size = new Size(166, 15);
             label1.TabIndex = 10;
-            label1.Text = "GitHub: Sehyn";
+            label1.Text = "GitHub: Sehyn // Mods:Gktwo";
             // 
             // LaunchGameModsButton
             // 
@@ -162,7 +162,7 @@
             LaunchGameModsButton.UseVisualStyleBackColor = true;
             LaunchGameModsButton.Click += LaunchGameModsButton_Click;
             // 
-            // Form1
+            // ModLoader
             // 
             ClientSize = new Size(515, 433);
             Controls.Add(LaunchGameModsButton);
@@ -178,7 +178,7 @@
             Controls.Add(uninstallModButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "ModLoader";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Wuthering Waves Mod Loader [v1.0]";
             groupBox1.ResumeLayout(false);

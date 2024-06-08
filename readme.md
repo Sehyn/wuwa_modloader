@@ -33,7 +33,8 @@ Wuwa Modloader is an application designed to simplify the management of mods for
 ## Mod Descriptions
 - Mod descriptions are loaded from a JSON file named "modDescriptions.json" located in the application directory.
 - Each mod file name corresponds to a description in the JSON file.
-- Please note that the mods are from Gktwo.
+- Please note that the mods are from Gktwo which can be found: https://github.com/Gktwo/KUN-mod
+
 
 ## Contributing
 - Contributions and bug reports are welcome. Feel free to submit a pull request or open an issue on the GitHub repository.
