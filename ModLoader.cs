@@ -156,8 +156,24 @@ namespace wuwa_modloader
 
         private void UpdateInstallButtonState()
         {
-            installModButton.Enabled = !string.IsNullOrEmpty(selectedFolderPath) && Directory.Exists(Path.Combine(selectedFolderPath, "Client", "Content", "Paks", "~mod"));
+            string modFolderPath = Path.Combine(selectedFolderPath, "Client", "Content", "Paks", "~mod");
+
+            if (!Directory.Exists(modFolderPath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(modFolderPath);
+                    installModButton.Enabled = !string.IsNullOrEmpty(selectedFolderPath) && Directory.Exists(modFolderPath);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error creating mod folder: " + ex.Message);
+                }
+            }
+
         }
+
 
         private void LaunchGameModsButton_Click(object sender, EventArgs e)
         {
