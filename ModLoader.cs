@@ -16,7 +16,7 @@ namespace wuwa_modloader
         {
             InitializeComponent();
             LoadModDescriptions();
-            UpdateInstallButtonState();
+            //UpdateInstallButtonState();
         }
 
         private void LoadModDescriptions()
@@ -177,7 +177,7 @@ namespace wuwa_modloader
 
         private void LaunchGameModsButton_Click(object sender, EventArgs e)
         {
-           
+
             string executableName = "Wuthering Waves.exe";
             string executablePath = Path.Combine(selectedFolderPath, executableName);
             string arguments = "-fileopenlog";
@@ -187,6 +187,25 @@ namespace wuwa_modloader
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = executablePath;
                 startInfo.Arguments = arguments;
+
+                Process.Start(startInfo);
+            }
+            else
+            {
+                MessageBox.Show("Executable not found in the selected folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LaunchGameWithoutModsButton_Click(object sender, EventArgs e)
+        {
+
+            string executableName = "Wuthering Waves.exe";
+            string executablePath = Path.Combine(selectedFolderPath, executableName);
+
+            if (File.Exists(executablePath))
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = executablePath;
 
                 Process.Start(startInfo);
             }

@@ -46,6 +46,7 @@
             groupBox1 = new GroupBox();
             label1 = new Label();
             LaunchGameModsButton = new Button();
+            LaunchGameWithoutModsButton = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(173, 409);
+            label1.Location = new Point(173, 434);
             label1.Name = "label1";
             label1.Size = new Size(166, 15);
             label1.TabIndex = 10;
@@ -162,9 +163,20 @@
             LaunchGameModsButton.UseVisualStyleBackColor = true;
             LaunchGameModsButton.Click += LaunchGameModsButton_Click;
             // 
+            // LaunchGameWithoutModsButton
+            // 
+            LaunchGameWithoutModsButton.Location = new Point(6, 408);
+            LaunchGameWithoutModsButton.Name = "LaunchGameWithoutModsButton";
+            LaunchGameWithoutModsButton.Size = new Size(503, 23);
+            LaunchGameWithoutModsButton.TabIndex = 12;
+            LaunchGameWithoutModsButton.Text = "Launch game without mods";
+            LaunchGameWithoutModsButton.UseVisualStyleBackColor = true;
+            LaunchGameWithoutModsButton.Click += LaunchGameWithoutModsButton_Click;
+            // 
             // ModLoader
             // 
-            ClientSize = new Size(515, 433);
+            ClientSize = new Size(515, 458);
+            Controls.Add(LaunchGameWithoutModsButton);
             Controls.Add(LaunchGameModsButton);
             Controls.Add(label1);
             Controls.Add(groupBox1);
@@ -180,7 +192,7 @@
             MaximizeBox = false;
             Name = "ModLoader";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Wuthering Waves Mod Loader [v1.0.1]";
+            Text = "Wuthering Waves Mod Loader [v1.0.2]";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -190,5 +202,6 @@
         private GroupBox groupBox1;
         private Label label1;
         private Button LaunchGameModsButton;
+        private Button LaunchGameWithoutModsButton;
     }
 }
