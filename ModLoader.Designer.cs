@@ -192,7 +192,7 @@
             MaximizeBox = false;
             Name = "ModLoader";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Wuthering Waves Mod Loader [v1.0.2]";
+            Text = "Wuthering Waves Mod Loader [v1.0.3]";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

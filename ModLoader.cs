@@ -16,7 +16,8 @@ namespace wuwa_modloader
         {
             InitializeComponent();
             LoadModDescriptions();
-            //UpdateInstallButtonState();
+            LoadSavedDirectory();
+            UpdateInstallButtonState();
         }
 
         private void LoadModDescriptions()
@@ -41,6 +42,7 @@ namespace wuwa_modloader
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedFolderPath = folderDialog.SelectedPath;
+                    SaveSelectedDirectory(selectedFolderPath);
                     string gameExePath = Path.Combine(selectedFolderPath, "Wuthering Waves.exe");
                     if (File.Exists(gameExePath))
                     {
@@ -171,13 +173,10 @@ namespace wuwa_modloader
                     MessageBox.Show("Error creating mod folder: " + ex.Message);
                 }
             }
-
         }
-
 
         private void LaunchGameModsButton_Click(object sender, EventArgs e)
         {
-
             string executableName = "Wuthering Waves.exe";
             string executablePath = Path.Combine(selectedFolderPath, executableName);
             string arguments = "-fileopenlog";
@@ -198,7 +197,6 @@ namespace wuwa_modloader
 
         private void LaunchGameWithoutModsButton_Click(object sender, EventArgs e)
         {
-
             string executableName = "Wuthering Waves.exe";
             string executablePath = Path.Combine(selectedFolderPath, executableName);
 
@@ -213,6 +211,24 @@ namespace wuwa_modloader
             {
                 MessageBox.Show("Executable not found in the selected folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LoadSavedDirectory()
+        {
+            string savedDirectory = Properties.Settings.Default.SelectedDirectory;
+            if (!string.IsNullOrEmpty(savedDirectory) && Directory.Exists(savedDirectory))
+            {
+                selectedFolderPath = savedDirectory;
+                selectedPathLabel.Text = "Selected Path: " + selectedFolderPath;
+                LoadAvailableMods();
+                LoadInstalledMods();
+            }
+        }
+
+        private void SaveSelectedDirectory(string directory)
+        {
+            Properties.Settings.Default.SelectedDirectory = directory;
+            Properties.Settings.Default.Save();
         }
     }
 }
